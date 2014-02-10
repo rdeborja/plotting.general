@@ -1,0 +1,17 @@
+{
+    "contents" : "write.plot <- function(filename = NULL, plot, device, path = NULL, scale = 1, plot.width = 6, plot.height = 6, plot.units = 'in', resolution = 1600) {\n  \n  # setup a few variables\n  old.bitmaptype <- getOptions('bitmapType')\n  options(bitmapType = 'cairo')\n  \n  if (!is.null(filename)) {\n    ggsave(\n      filename = filename,\n      plot = plot,\n      device = device,\n      path = path,\n      scale = scale,\n      width = plot.width,\n      height = plot.height,\n      units = plot.units,\n      dpi = resolution\n      )\n    options(bitmapType = old.bitmapType)  \n    }\n  }\n",
+    "created" : 1391652927537.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2912644582",
+    "id" : "FE81736B",
+    "lastKnownWriteTime" : 1391725714,
+    "path" : "~/local/src/R/plotting.general/R/write.plot.R",
+    "project_path" : "R/write.plot.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
