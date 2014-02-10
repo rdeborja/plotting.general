@@ -8,7 +8,7 @@ create.barplot <- function(x, data, rotate = FALSE, width = 0.9, ylab = NULL, xl
   if (rotate == TRUE) {
     plot.object <- ggplot.object + geom_bar(width = width) + coord_flip() + xlab(xlab) + ylab(ylab)
   } else {
-    plot.object <- ggplot.object + geom_bar(width = width)
+    plot.object <- ggplot.object + geom_bar(width = width) + xlab(xlab) + ylab(ylab)
     }
   return(plot.object)
   }
