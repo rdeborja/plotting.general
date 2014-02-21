@@ -2,5 +2,6 @@ exportPattern("^[[:alpha:]]+")
 
 export(
   "create.barplot",
-  "create.scatterplot"
+  "create.scatterplot",
+  "create.stripplot"
   )

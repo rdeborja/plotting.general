@@ -6,9 +6,18 @@ create.barplot <- function(x, data, rotate = FALSE, width = 0.9, ylab = NULL, xl
   
   # plot the data
   if (rotate == TRUE) {
-    plot.object <- ggplot.object + geom_bar(width = width) + coord_flip() + xlab(xlab) + ylab(ylab)
+    plot.object <- ggplot.object + geom_bar(width = width) + coord_flip()
   } else {
-    plot.object <- ggplot.object + geom_bar(width = width) + xlab(xlab) + ylab(ylab)
+    plot.object <- ggplot.object + geom_bar(width = width)
     }
+
+  # add custom labels to the x and y axes
+  if (!is.null(xlab)) {
+    plot.object <- plot.object + xlab(xlab)
+    }
+  if (!is.null(ylab)) {
+    plot.object <- plot.object + ylab(ylab)
+    }
+  
   return(plot.object)
   }

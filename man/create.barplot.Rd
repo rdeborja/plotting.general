@@ -14,13 +14,6 @@ create.barplot(x, data, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, c
   \item{xlab}{Label for the x-axis}
   \item{covariate}{Covariate bar, future feature}
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \author{
 Author: Richard de Borja <richard.deborja@sickkids.ca>
 Maintainer: Richard de Borja <richard.deborja@sickkids.ca>
