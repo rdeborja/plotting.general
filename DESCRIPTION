@@ -1,7 +1,7 @@
 Package: plotting.general
 Type: Package
 Title: Plotting functions using ggplot2.
-Version: 0.2
+Version: 0.3
 Date: 2014-02-21
 Author: Richard de Borja
 Maintainer: Richard de Borja <richard.deborja@sickkids.ca>

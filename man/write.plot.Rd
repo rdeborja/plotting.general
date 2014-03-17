@@ -14,7 +14,6 @@ write.plot(filename = NULL, plot, resolution = 1600)
   \item{filename}{The filename to write the plot to}
   \item{plot}{The ggplot object to output}
   \item{resolution}{Resolution of output image in dpi (default: 1600)}
-  \
 }
 \author{
 Author: Richard de Borja <richard.deborja@sickkids.ca>
