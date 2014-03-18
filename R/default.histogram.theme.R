@@ -1,3 +1,0 @@
-default.histogram.theme <- function() {
-  
-  }

@@ -1,9 +1,9 @@
-create.scatterplot <- function(filename = NULL, data, x, y, regression.line = FALSE, regression.line.cex = 'black', regression.line.error = FALSE, xlab = NULL, ylab = NULL, resolution = NULL) {
+create.scatterplot <- function(filename = NULL, data, x, y, regression.line = FALSE, regression.line.error = FALSE, xlab = NULL, ylab = NULL, resolution = NULL) {
   ggplot.object <- ggplot(data = data, aes_string(x = x, y = y))
   
   # add a regression line to the scatterplot with standard error (i.e. se) set to FALSE
   if (TRUE == regression.line) {
-    plot.object <- ggplot.object + geom_point() + geom_smooth(method = 'lm', se = regression.line.error, colour = regression.line.cex)
+    plot.object <- ggplot.object + geom_point() + geom_smooth(method = 'lm', se = regression.line.error)
   } else if (FALSE == regression.line) {
     plot.object <- ggplot.object + geom_point() 
     }

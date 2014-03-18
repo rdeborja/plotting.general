@@ -1,7 +1,11 @@
-create.heatmap <- function(data, x, y, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20) {
+create.heatmap <- function(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, x.axis.label.rotate = 0) {
   plot.object <- ggplot(data = data, aes_string(x = x, y = y))
-  plot.object <- plot.object + geom_raster(colour = 'red') + default.heatmap.theme(base_size = 24, base_family = 'Arial')
-
+  if (!is.null(fill)) {
+    plot.object <- plot.object + geom_raster(aes_string(fill = fill)) + plotting.general:::default.heatmap.theme(base_size = 24, base_family = 'Helvetica', angle = x.axis.label.rotate)
+  } else {
+    plot.object <- plot.object + geom_raster() + default.heatmap.theme(base_size = 24, base_family = 'Helvetica', angle = x.axis.label.rotate)  
+    }
+  
   # add custom labels to the x and y axes
   if (!is.null(xlab)) {
     plot.object <- plot.object + xlab(xlab)
