@@ -14,9 +14,18 @@ License: \tab GPL-2\cr
 LazyLoad: \tab yes \cr
 }
 create.barplot()
+create.heatmap()
+create.histogram()
+create.scatterplot()
+create.stripplot()
+write.plot()
 }
 \author{
 Author: Richard de Borja
 Maintainer: Richard de Borja <richard.deborja@sickkids.ca>
 }
+\references{
+Paul Murrell (2011). R Graphics (2nd ed.). Boca Raton, FL: CRC Press 
+}
+\keyword{ plotting }
 \keyword{ ggplot2 }

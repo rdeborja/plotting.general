@@ -21,6 +21,11 @@ create.histogram(x, data, xlab, ylab, binwidth, filename)
 Richard de Borja <richard.deborja@sickkids.ca>
 }
 \examples{
+# create a simple histogram
+create.histogram(
+  data = mtcars,
+  x = 'mpg'
+  )
 }
 \keyword{ plotting.general }
 \keyword{ ggplot2 }
