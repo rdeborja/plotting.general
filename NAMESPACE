@@ -4,5 +4,6 @@ export(
   "create.barplot",
   "create.scatterplot",
   "create.stripplot",
-  "create.histogram"
+  "create.histogram",
+  "create.boxplot"
   )

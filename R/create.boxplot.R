@@ -1,0 +1,19 @@
+create.boxplot <- function(data = NULL, x = NULL, y, xlab = NULL, ylab = NULL, filename = NULL, resolution = 1600) {
+  if (is.null(data)) stop('data is missing with no default')
+  if (is.null(x)) stop('x is missing with no default')
+  
+  # note that "x" should already be a factor
+  plot.object <- ggplot(data = data, aes_string(x = x, y = y))
+#  plot.object <- plot.object + geom_boxplot() + theme_bw(base_size = fontsize)
+  plot.object <- plot.object + geom_boxplot() + plotting.general:::default.boxplot.theme()
+  # add x and y axis labels if they are provided in the argument list
+  if (!is.null(xlab)) {
+    plot.object <- plot.object + xlab(xlab)
+    }
+  
+  if (!is.null(ylab)) {
+    plot.object <- plot.object + ylab(ylab)
+    }
+  
+  return(plot.object)
+  }

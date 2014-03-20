@@ -3,7 +3,7 @@ create.heatmap <- function(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, fi
   if (!is.null(fill)) {
     plot.object <- plot.object + geom_raster(aes_string(fill = fill)) + plotting.general:::default.heatmap.theme(base_size = 24, base_family = 'Helvetica', angle = x.axis.label.rotate)
   } else {
-    plot.object <- plot.object + geom_raster() + default.heatmap.theme(base_size = 24, base_family = 'Helvetica', angle = x.axis.label.rotate)  
+    plot.object <- plot.object + geom_raster() + plotting.general:::default.heatmap.theme(base_size = 24, base_family = 'Helvetica', angle = x.axis.label.rotate)  
     }
   
   # add custom labels to the x and y axes
