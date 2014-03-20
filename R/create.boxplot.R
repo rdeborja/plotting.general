@@ -14,6 +14,12 @@ create.boxplot <- function(data = NULL, x = NULL, y, xlab = NULL, ylab = NULL, f
   if (!is.null(ylab)) {
     plot.object <- plot.object + ylab(ylab)
     }
+
+	if (is.null(filename)) {
+		return(plot.object)
+	} else {
+		write.plot(filename = filename, resolution = resolution, plot = plot.object)
+		}
   
   return(plot.object)
   }
