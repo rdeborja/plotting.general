@@ -16,6 +16,9 @@ create.scatterplot <- function(filename = NULL, data, x, y, regression.line = FA
     plot.object <- plot.object + ylab(ylab)
     }
   
+  # use the theme_bw() theme as default with a base font size of 24
+  plot.object <- plot.object + theme_bw(base_size = 24)
+  
   # if a filename is provided, write the plot to a file otherwise return the plot object
   if (!is.null(filename)) {
     if (!is.null(resolution)) {

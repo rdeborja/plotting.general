@@ -1,26 +1,31 @@
 \name{create.barplot}
 \alias{create.barplot}
-\title{Create a barplot}
-\description{Create a barplot given a dataframe.}
+\title{Create a barplot.}
+\description{Create a barplot from a dataframe based on ggplot2's geom_bar().}
 \usage{
-create.barplot(x, data, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, covariate = NULL)
+create.barplot(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group.col = FALSE, group.row = FALSE, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, xaxis.angle = 0, yaxis.log.scale = FALSE, xaxis.log.scale = FALSE)
 }
 \arguments{
-  \item{x}{String containing name of dataframe element to process}
-  \item{data}{Dataframe}
-  \item{rotate}{Flag to determine whether to rotate barplot}
-  \item{width}{Width of the bar}
-  \item{ylab}{Label for the y-axis}
-  \item{xlab}{Label for the x-axis}
-  \item{covariate}{Covariate bar, future feature}
+  \item{data}{Dataframe containing data to plot}
+  \item{x}{Dataframe element to plot as the x-axis}
+  \item{y}{Dataframe element to plot on the y-axis}
+  \item{fill}{Dataframe element to use as the colour to fill the bars}
+  \item{group}{Dataframe element to use to group bars using facet_grid()}
+  \item{group.col}{Boolean to group data for facet_grid() by column}
+  \item{group.row}{Boolean to group data for facet_grid() by row}
+  \item{rotate}{Boolean to rotate the plot}
+  \item{width}{Bin width}
+  \item{ylab}{Text to label the y-axis}
+  \item{xlab}{Text to label the x-axis}
+  \item{xaxis.angle}{Angle of x-axis tick labels}
+  \item{yaxis.log.scale}{Boolean to show yaxis in log scale}
+  \item{xaxis.log.scale}{Boolean to show xaxis in log scale}
 }
+\value{ggplot object}
 \author{
-Author: Richard de Borja <richard.deborja@sickkids.ca>
-Maintainer: Richard de Borja <richard.deborja@sickkids.ca>
+Richard de Borja <richard.deborja@sickkids.ca>
 }
 \examples{
-create.barplot(data = mtcars, x = 'cyl', width = 1)
+create.barplot(data = mtcars, x = 'cyl')
 }
 \keyword{ barplot }
-\keyword{ create.barplot }
-\keyword{ ggplot2 }

@@ -2,8 +2,13 @@ exportPattern("^[[:alpha:]]+")
 
 export(
   "create.barplot",
+  "create.boxplot",
+  "create.histogram",
   "create.scatterplot",
   "create.stripplot",
-  "create.histogram",
-  "create.boxplot"
+  "create.stacked.barplot",
+  "default.barplot.theme",
+  "default.boxplot.theme",
+  "default.heatmap.theme",
+  "write.plot"
   )
