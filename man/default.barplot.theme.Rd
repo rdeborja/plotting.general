@@ -8,7 +8,7 @@ A theme function that defines a set of default values for barplots created by th
 on theme_bw() and modifies a few parameters.
 }
 \usage{
-default.barplot.theme(base_size = 24, base_family = "Helvetica", xaxis.angle = 0)
+default.barplot.theme(base_size = 24, base_family = "Helvetica", xaxis.angle = 90)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

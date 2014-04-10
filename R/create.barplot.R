@@ -1,4 +1,4 @@
-create.barplot <- function(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group.col = FALSE, group.row = FALSE, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, xaxis.angle = 0, yaxis.log.scale = FALSE, xaxis.log.scale = FALSE) {  
+create.barplot <- function(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group.col = FALSE, group.row = FALSE, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, yaxis.log.scale = FALSE, xaxis.log.scale = FALSE, theme = NULL) {  
   # validate the arguments
   if (is.null(x)) stop('Missing x argument')
   if (is.null(data)) stop('Missing data argument')
@@ -63,8 +63,11 @@ create.barplot <- function(data = NULL, x = NULL, y = NULL, fill = NULL, group =
   }
   
   # modify the theme to include any modifications made at the command line (for now it's just the xaxis label angle)
-  #plot.object <- plot.object + theme(axis.text.x = element_text(angle = xaxis.angle, hjust = 0.5))
-  plot.object <- plot.object + default.barplot.theme(xaxis.angle = 90)  
+  if (is.null(theme)) {
+    plot.object <- plot.object + plotting.general::default.barplot.theme()   
+  } else {
+    plot.object <- plot.object + theme
+    }
   
   return(plot.object)
   }

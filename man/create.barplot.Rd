@@ -3,7 +3,7 @@
 \title{Create a barplot.}
 \description{Create a barplot from a dataframe based on ggplot2's geom_bar().}
 \usage{
-create.barplot(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group.col = FALSE, group.row = FALSE, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, xaxis.angle = 0, yaxis.log.scale = FALSE, xaxis.log.scale = FALSE)
+create.barplot(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group.col = FALSE, group.row = FALSE, rotate = FALSE, width = 0.9, ylab = NULL, xlab = NULL, yaxis.log.scale = FALSE, xaxis.log.scale = FALSE, theme = NULL)
 }
 \arguments{
   \item{data}{Dataframe containing data to plot}
@@ -17,9 +17,9 @@ create.barplot(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group
   \item{width}{Bin width}
   \item{ylab}{Text to label the y-axis}
   \item{xlab}{Text to label the x-axis}
-  \item{xaxis.angle}{Angle of x-axis tick labels}
   \item{yaxis.log.scale}{Boolean to show yaxis in log scale}
   \item{xaxis.log.scale}{Boolean to show xaxis in log scale}
+  \item{theme}{Theme function to use for the plot}
 }
 \value{ggplot object}
 \author{

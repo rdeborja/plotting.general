@@ -1,4 +1,4 @@
-create.histogram <- function(x, data, xlab = NULL, ylab = NULL, binwidth = NULL, filename = NULL, resolution = NULL) {
+create.histogram <- function(data = NULL, x = NULL, xlab = NULL, ylab = NULL, binwidth = NULL, filename = NULL, resolution = 1200, theme = NULL) {
   # initialize the plot object
   plot.object <- ggplot(data = data, aes_string(x = x))
   
@@ -17,15 +17,16 @@ create.histogram <- function(x, data, xlab = NULL, ylab = NULL, binwidth = NULL,
     plot.object <- plot.object + ylab(ylab)
     }
   
+  # add a theme, if none is provided as a passed argument, use the default theme
+  if (is.null(theme)) {
+    plot.object <- plot.object + default.histogram.theme()
+  }
+  
   # if the filename is present then write the histogram to a file, if not just return
   # the plot object
   if (is.null(filename)) {
     return(plot.object)
   } else {
-    if (!is.null(resolution)) {
-      plotting.general::write.plot(filename = filename, plot = plot.object, resolution = resolution)      
-    } else {
-      plotting.general::write.plot(filename = filename, plot = plot.object)  
-      }
+    plotting.general::write.plot(filename = filename, plot = plot.object)  
     }
   }

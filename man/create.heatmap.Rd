@@ -38,7 +38,8 @@ Richard de Borja <richard.deborja@sickkids.ca>
     x = 'car',
     y = 'cyl',
     xlab = '',
-    ylab = 'Number of Cylinders'
+    ylab = 'Number of Cylinders',
+    x.axis.label.rotate = 90
     )
 }
 \keyword{ plotting }
