@@ -7,12 +7,11 @@ Default heatmap theme.
 This function provides the set of default "theme" values for heatmaps.  The original base theme is theme_bw().
 }
 \usage{
-default.heatmap.theme(base_size = 24, base_family = "Helvetica", angle = 90)
+default.heatmap.theme(base_size = 24, base_family = "Helvetica")
 }
 \arguments{
   \item{base_size}{base size for the fonts in the heatmap}
   \item{base_family}{base family for the fonts in the heatmap}
-  \item{angle}{x-axis label angle}
 }
 \value{Returns a "theme" object to be used with ggplot2}
 \references{

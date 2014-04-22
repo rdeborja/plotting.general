@@ -7,7 +7,7 @@ Create a boxplot
 Create a barplot from a dataframe.
 }
 \usage{
-create.boxplot(data = NULL, x = NULL, y, xlab = NULL, ylab = NULL, filename = NULL, resolution = 1600)
+create.boxplot(data = NULL, x = NULL, y, xlab = NULL, ylab = NULL, theme = NULL, filename = NULL, resolution = 1600)
 }
 \arguments{
   \item{data}{Data frame containing data to plot (required)}
@@ -15,6 +15,7 @@ create.boxplot(data = NULL, x = NULL, y, xlab = NULL, ylab = NULL, filename = NU
   \item{y}{The data column inside the dataframe to plot on the y-axis}
   \item{xlab}{Label for the x-axis}
   \item{ylab}{Label for the y-axis}
+  \item{theme}{Theme gpplot function}
   \item{filename}{filename to write plot to}
   \item{resolution}{resolution for the plot}
 }

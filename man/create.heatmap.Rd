@@ -7,7 +7,7 @@ Create a heatmap.
 Create a heatmap from data within a data frame.
 }
 \usage{
-create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, x.axis.label.rotate = 0)
+create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, theme = NULL)
 }
 \arguments{
   \item{data}{data frame containing the data to plot}
@@ -19,7 +19,7 @@ create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NUL
   \item{filename}{filename containing plot}
   \item{resolution}{resolution of the plot}
   \item{base.size}{base size for fonts on the heatmap, this is used by default.heatmap.theme (default: 20)}
-  \item{x.axis.label.rotate}{angle of rotation for the x-axis labels (default = 0)}  
+  \item{theme}{theme for the plot}
 }
 \value{
 Returns the ggplot2 object if no filename is passed, otherwise returns the exit code for the creation of the plot.
@@ -38,8 +38,7 @@ Richard de Borja <richard.deborja@sickkids.ca>
     x = 'car',
     y = 'cyl',
     xlab = '',
-    ylab = 'Number of Cylinders',
-    x.axis.label.rotate = 90
+    ylab = 'Number of Cylinders'
     )
 }
 \keyword{ plotting }

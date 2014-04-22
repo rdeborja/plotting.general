@@ -8,8 +8,8 @@
 \tabular{ll}{
 Package: \tab plotting.general\cr
 Type: \tab Package\cr
-Version: \tab 0.7\cr
-Date: \tab 2014-04-10\cr
+Version: \tab 0.9\cr
+Date: \tab 2014-04-17\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes \cr
 }
