@@ -26,6 +26,27 @@ create.barplot(data = NULL, x = NULL, y = NULL, fill = NULL, group = NULL, group
 Richard de Borja <richard.deborja@sickkids.ca>
 }
 \examples{
+# set the cylinders as factors
+mtcars$cyl <- factor(mtcars$cyl)
+
+# create a simple barplot
 create.barplot(data = mtcars, x = 'cyl')
+
+# add x-axis and y-axis labels
+create.barplot(
+  data = mtcars,
+  x = 'cyl',
+  xlab = 'Number of Cylinders',
+  ylab = 'Count'
+  )
+
+# use the theme theme_bw() instead of the default barplot theme
+create.barplot(
+  data = mtcars,
+  x = 'cyl',
+  xlab = 'Number of Cylinders',
+  ylab = 'Count',
+  theme = theme_bw(base_size = 24, base_family = 'Helvetica')
+  )
 }
 \keyword{ barplot }

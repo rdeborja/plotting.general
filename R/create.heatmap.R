@@ -1,4 +1,4 @@
-create.heatmap <- function(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, theme = NULL) {
+create.heatmap <- function(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, theme = NULL, colour.scheme = NULL) {
   plot.object <- ggplot(data = data, aes_string(x = x, y = y))
   if (!is.null(fill)) {
     plot.object <- plot.object + geom_raster(aes_string(fill = fill))

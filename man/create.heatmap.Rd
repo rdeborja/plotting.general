@@ -7,7 +7,7 @@ Create a heatmap.
 Create a heatmap from data within a data frame.
 }
 \usage{
-create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, theme = NULL)
+create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NULL, resolution = NULL, base.size = 20, theme = NULL, colour.scheme = NULL)
 }
 \arguments{
   \item{data}{data frame containing the data to plot}
@@ -20,6 +20,7 @@ create.heatmap(data, x, y, fill = NULL, xlab = NULL, ylab = NULL, filename = NUL
   \item{resolution}{resolution of the plot}
   \item{base.size}{base size for fonts on the heatmap, this is used by default.heatmap.theme (default: 20)}
   \item{theme}{theme for the plot}
+  \item{colour.scheme}{A vector of two colours to use for the colourkey in the legend}
 }
 \value{
 Returns the ggplot2 object if no filename is passed, otherwise returns the exit code for the creation of the plot.
