@@ -4,11 +4,14 @@ export(
   "create.barplot",
   "create.boxplot",
   "create.histogram",
+  "create.multiplot",
   "create.scatterplot",
-  "create.stripplot",
   "create.stacked.barplot",
+  "create.stepplot",
+  "create.stripplot",
   "default.barplot.theme",
   "default.boxplot.theme",
   "default.heatmap.theme",
+  "default.stepplot.theme",
   "write.plot"
   )

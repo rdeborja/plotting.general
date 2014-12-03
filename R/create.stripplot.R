@@ -10,11 +10,7 @@ create.stripplot <- function(data, x, y, rotate = FALSE, xlab = NULL, ylab = NUL
   if (!is.null(ylab)) {
     plot.object <- plot.object + ylab(ylab)
     }
-  plot.object <- plot.object + 
-    theme(
-      axis.title = element_text(size = axis.label.font.size),
-      axis.text = element_text(size = axis.tick.font.size)
-      )
+  plot.object <- plot.object + default.stripplot.theme()
 
   return(plot.object);
   }
