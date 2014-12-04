@@ -1,4 +1,4 @@
-create.stepplot <- function(data=NULL, x=NULL, y=NULL, group=NULL, group.col=xlab=NULL, ylab=NULL, theme=NULL, filename=NULL, resolution=NULL, width=8, height=11) {
+create.stepplot <- function(data=NULL, x=NULL, y=NULL, group=NULL, xlab=NULL, ylab=NULL, theme=NULL, filename=NULL, resolution=NULL, width=8, height=11) {
   if (is.null(data)) stop("Mandatory argument data is missing")
   
   # initialize the plot object

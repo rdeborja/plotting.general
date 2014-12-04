@@ -9,6 +9,7 @@ export(
   "create.stacked.barplot",
   "create.stepplot",
   "create.stripplot",
+  "create.violinplot",
   "default.barplot.theme",
   "default.boxplot.theme",
   "default.heatmap.theme",
