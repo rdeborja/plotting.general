@@ -36,7 +36,7 @@ create.stepplot <- function(data=NULL, x=NULL, y=NULL, group=NULL, xlab=NULL, yl
     plot.object <- plot.object + default.stepplot.theme()
   }
   
-  # if the filename is present then write the histogram to a file, if not just return
+  # if the filename is present then write the stepplot to a file, if not just return
   # the plot object
   if (is.null(filename)) {
     return(plot.object)
